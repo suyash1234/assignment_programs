@@ -4,45 +4,48 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Stack;
+import java.util.Queue;
+import java.util.LinkedList;
 public class Utility<E>
 {
 	BufferedReader bufferedReader,buf;
 	public Utility()
-		{
-			bufferedReader =new BufferedReader(new InputStreamReader(System.in));
-		}
+	{
+		bufferedReader =new BufferedReader(new InputStreamReader(System.in));
+	}
 //reading input string
-		public String inputString()
-			{
-			try 
-				{
-   			    return bufferedReader.readLine();
-		     	}
-			catch(Exception e)
-				{
-				System.out.println(e);
-				}
-			return "";
-			}
+	public String inputString()
+	{
+		try 
+		{
+   	    	return bufferedReader.readLine();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		return "";
+	}
 //reading Integer Input
 	public int inputInteger()
 	{
 		try
-			{
-				try
-            	    {
-					return Integer.parseInt(bufferedReader.readLine());
-				    }
-				catch(NumberFormatException e)
-                	{
-					System.out.println(e);
-				    }
+		{
+			try
+            {
+				return Integer.parseInt(bufferedReader.readLine());
 			}
-	   catch(Exception e)
-	   		{
-		    System.out.println(e);
+			catch(NumberFormatException e)
+            {
+				System.out.println(e);
 			}
-	   return 0;
+		}
+	   	catch(Exception e)
+	    {
+	   		System.out.println(e);
+		}
+	    return 0;
 	}
 //reading double Input
 	public double inputDouble()
@@ -161,7 +164,7 @@ public static void RandomNumber(int c)
  		printNumbers(array);
  		}
 	}
-//
+//power function method
 public void powerfunction()
 {
 	int n = 4;
@@ -191,5 +194,22 @@ public static void printAll(int[] a)
 			}
 		}
 	}
+}
+//method of isPalindrome
+public void isPalindrome(String n)
+{
+	Stack<String> stac=new Stack<String>();
+	Queue<String> que=new LinkedList<String>();
+	String s = new String();
+    for(int i = 0; i < n.length( ); i++)
+	{
+    	s = "" + n.charAt(i);
+		stac.push(s);
+		que.add(s);
+	}
+	if(!que.remove().equals(stac.pop()))
+		System.out.println("string is not palindrome");
+	else		
+		System.out.println("string is palindrome");
 }
 }

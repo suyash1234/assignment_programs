@@ -29,7 +29,7 @@ public class Balancedparentheses
         }
         else
         {
-            System.out.println("Expresion is Not Balanced");
+        	System.out.println("Expresion is Not Balanced");
         }
    }
    public static void main(String[] args)
