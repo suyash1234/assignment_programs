@@ -7,6 +7,10 @@ import java.util.Random;
 import java.util.Queue;
 import java.util.Stack;
 import java.util.LinkedList;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.IOException;
 public class Utility<E>
 {
 	BufferedReader bufferedReader,buf;
@@ -66,6 +70,26 @@ public class Utility<E>
 			System.out.println(e);
 		}
 		return 0.0;
+	}
+	//read data from file
+	public String readFile(String fileName)
+	{
+		try
+		{
+			FileInputStream fis = new FileInputStream(fileName);
+       		String word="";
+           	while (fis.available() > 0)
+			{
+            	char ch = (char) fis.read();
+             	word= word+ch;
+           	}
+        	return word;
+		}
+		catch(IOException ioe)
+		{
+			System.out.println(ioe);
+		}
+		return null;
 	}
 //Harmonic method
 public float reversefunction(int num)
