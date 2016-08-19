@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.File;
 import java.io. BufferedReader;
 import java.io.IOException;
-public class NodeUtility
+public class NodeHashUtility
 {      
 	NodeHash data;
 	NodeHash head;
@@ -155,7 +155,4 @@ public class NodeUtility
           catch(IOException e){
           }
       } //end of method
-//.......for ordered linked list...................
-
-
 }

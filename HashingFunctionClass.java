@@ -1,7 +1,6 @@
 package com.bridgelabz.task;
-import com.bridgelabz.util.NodeUtility;
+import com.bridgelabz.util.NodeHashUtility;
 import com.bridgelabz.util.NodeHash;
-import com.bridgelabz.util.Ordered;
 import com.bridgelabz.util.OrderedLinkedList;
 import com.bridgelabz.util.Utility;
 public class HashingFunctionClass
@@ -9,8 +8,8 @@ public class HashingFunctionClass
 	NodeHash node;
     boolean option;
   	Utility u = new Utility();
-	Ordered[] order=new Ordered[11];
-	NodeUtility nu=new NodeUtility();
+	OrderedLinkedList[] order=new OrderedLinkedList[11];
+	NodeHashUtility nu=new NodeHashUtility();
 	public  HashingFunctionClass()
 	{
 		int[] retArray = nu.integerFileReader();
@@ -20,7 +19,7 @@ public class HashingFunctionClass
 			int rem = retArray[i]%11;
 			if(order[rem]== null)
 			{
-				order[rem] = new Ordered();
+				order[rem] = new OrderedLinkedList();
 				order[rem].addItem(retArray[i]);
 			}
 			else

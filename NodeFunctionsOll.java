@@ -1,15 +1,15 @@
 package com.bridgelabz.util;
-import com.bridgelabz.util.Node1;
+import com.bridgelabz.util.NodeOll;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class NodeFunctionsSorted
+public class NodeFunctionsOll
 {
-	Node1 head;
-	Node1 tail;
+	NodeOll head;
+	NodeOll tail;
     public String readFile(String fileName)
 	{
 		try
@@ -32,7 +32,7 @@ public class NodeFunctionsSorted
 	public void display()
 	{  
     	String list="";
-   		Node1 current= head;
+   		NodeOll current= head;
    		if (head== null)
     	System.out.println("List is empty");
   		else
@@ -47,10 +47,10 @@ public class NodeFunctionsSorted
 	}
 	public void add(int value)
     {
-		Node1 n = new Node1();
+		NodeOll n = new NodeOll();
 		n.setValue(value);// set value of node
-		Node1 temp = head;
-		Node1 prev = head;
+		NodeOll temp = head;
+		NodeOll prev = head;
 		boolean ins = false;
 		// if list is empty make it head and tail
 		if (head == null)
@@ -90,7 +90,7 @@ public class NodeFunctionsSorted
 	}
 	public void showList() 
     {
-		Node1 temp = head;
+		NodeOll temp = head;
 		// if linked list is empty
 		if (temp == null)
 			System.out.println("List is null");
@@ -106,7 +106,7 @@ public class NodeFunctionsSorted
 
 	public boolean search(int search)	//search for item
 	{
-	  Node1 temp=head;
+	  NodeOll temp=head;
 	  if(temp==null)
 	     return false;
 	  while(temp!=null)
@@ -123,7 +123,7 @@ public class NodeFunctionsSorted
 	public int size()
 	{
 	   int count=0;
-	   Node1 temp=head;
+	   NodeOll temp=head;
 	   if(temp==null)
 	      return count;
 	   else
@@ -146,7 +146,7 @@ public class NodeFunctionsSorted
 	
 	public int index(int value)
 	{
-	  Node1 temp=head;
+	  NodeOll temp=head;
 	  int count=0;
 	  if(temp==null)
 	    return count;
@@ -165,9 +165,9 @@ public class NodeFunctionsSorted
 	
 	public void remove(int value)
 	{
-		Node1 n=new Node1();
-		Node1 temp=head;
-		Node1 previous=head;
+		NodeOll n=new NodeOll();
+		NodeOll temp=head;
+		NodeOll previous=head;
 		if(temp==null)
 			System.out.println("Can not remove");
 		else 

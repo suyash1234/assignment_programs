@@ -1,14 +1,13 @@
 package com.bridgelabz.util;
 import com.bridgelabz.util.Utility;
-import com.bridgelabz.util.Ordered;
-import com.bridgelabz.util.NodeUtility;
+import com.bridgelabz.util.NodeHashUtility;
 import com.bridgelabz.util.NodeHash;
 // Creating the class
 public class OrderedLinkedList
 {
 
     NodeHash start;
-    NodeUtility nu=new NodeUtility();
+    NodeHashUtility nu=new NodeHashUtility();
     Utility u1=new Utility();
     // get data From a file
     void getDataFromFile()

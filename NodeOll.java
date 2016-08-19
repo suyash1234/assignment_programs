@@ -1,15 +1,15 @@
 package com.bridgelabz.util;
-public class Node1<T>
+public class NodeOll<T>
 {
 	private int value;
-	private Node1<T> next;
+	private NodeOll<T> next;
 	//returns node value
 	public int getValue()
 	{
 		return value;
 	}
 	//returns next node reference
-	public Node1<T> getNext()
+	public NodeOll<T> getNext()
 	{
 		return next;
 	}
@@ -19,7 +19,7 @@ public class Node1<T>
 		this.value=value;
 	}
 	//set node reference
-	public void setNext(Node1<T> next)
+	public void setNext(NodeOll<T> next)
 	{
 		this.next=next;
 	}

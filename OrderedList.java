@@ -1,12 +1,12 @@
 package com.bridgelabz.task;
 import com.bridgelabz.util.Utility;
-import com.bridgelabz.util.NodeFunctionsSorted;
+import com.bridgelabz.util.NodeFunctionsOll;
 public class OrderedList
 {
 	public static void main(String[] args) throws Exception 
 	{       
     	Utility u = new Utility();
-        NodeFunctionsSorted n=new NodeFunctionsSorted();
+        NodeFunctionsOll n=new NodeFunctionsOll();
         String fileData = n.readFile("abc.txt");
         fileData = fileData.trim();
         String [] words = fileData.split(" ");

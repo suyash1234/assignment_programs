@@ -1,12 +1,13 @@
 package com.bridgelabz.util;
 import com.bridgelabz.util.Utility;
-import com.bridgelabz.util.NodeUtility;
+import com.bridgelabz.util.NodeHashUtility;
 import com.bridgelabz.util.NodeHash;
 // Creating the class
-public class Ordered
+public class OrderedLinkedList
 {
+
     NodeHash start;
-    NodeUtility nu=new NodeUtility();
+    NodeHashUtility nu=new NodeHashUtility();
     Utility u1=new Utility();
     // get data From a file
     void getDataFromFile()
@@ -17,7 +18,8 @@ public class Ordered
         System.out.println("Array Size is "+size);
         for(int i=0;i<size;i++)
         {
-	    	addItem(retArry[i]);
+
+            addItem(retArry[i]);
         }
     }
     // Function for Lsit
@@ -54,7 +56,7 @@ public class Ordered
         NodeHash temp =start;
         while( temp != null)
         {
-            System.out.print(temp.data+"***");
+            System.out.print(temp.data+"---->");
             temp=temp.nextNode;
         }
         System.out.println(" ");
@@ -69,7 +71,7 @@ public class Ordered
             temp=temp.nextNode;
             count++;
         }
-        System.out.println("size of Linked List"+count);
+        System.out.println("sizze of Linked List"+count);
         return count;
     }
 
@@ -107,13 +109,13 @@ public class Ordered
 
     }
     // removeWord From a Linked lIst
-  	public void removeData(int count)
+    void removeData(int count)
     {
         NodeHash temp = start;
         if(count==1)
         {
             start =start.nextNode;
-        System.out.println("After Deleting List is ");
+        System.out.println("After Deleting LIst is ");
 
         display();
         }
@@ -130,7 +132,7 @@ public class Ordered
     }
     public static void main(String[] args)
     {
-        Ordered obj = new Ordered();
+        OrderedLinkedList obj = new OrderedLinkedList();
         obj.getDataFromFile();
         obj.display();
         obj.size();
